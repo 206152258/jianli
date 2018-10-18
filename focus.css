@@ -1,41 +1,97 @@
  *{
-     padding:0;
-     margin:0;
+     padding:0px;
+     margin:0px;
      text-decoration:none;
      list-style:none;
  }
- 
- li {
-    float:left; 
-    margin-left:14px;
-    margin-right:14px;
-    border-bottom:4px solid transparent;
-    padding-top:4px;
-    padding-bottom:4px;
-
-}
+ body{
+     background: black;
+     color:white;
+ }
+ /* 清理浮动塌陷 */
 .clearfix::after
 {
     clear:both;
     content:"";
     display:block;
 }
-
-nav>ul>a{
+/* 右侧导航栏 */
+nav>ul>li>a{
   
-    font-size:12px;
+    font-size:13px;
     color:gray;
     font-weight:bold;
 }
-/* #logo{
-    float:left;
-    } */
-nav{
+nav>ul>li{
+    float:left; 
+    margin-left:14px;
+    margin-right:14px;
+    border-bottom:4px solid transparent;
+    padding-top:4px;
+    padding-bottom:4px;
+}
+#one>nav{
     float:right;
+    padding-left:8px;
+    padding-bottom:22px;
+    padding-top:22px;
+    margin-right:10px;
 }
 ul li:hover{
-    
     color:orange;
-    
     border-bottom:4px solid red;
+}
+/* 左侧导航栏 */
+#logo{
+    margin-left:12px;
+}
+#one>a>span{
+    float:left;
+    font-family:"Arial Black";
+    font-size:22px;
+     margin-top:22px;
+     
+     /* margin-left:px; */
+}
+.rs{
+    color:#9A9DA2;
+    
+    float:left;
+    }
+.card{
+    color:#e6686a;
+     margin-left:4px 
+}
+/* 中部介绍栏 */
+main{
+    border:3px solid red;
+    display:block;
+    width:500px;
+    height:400px;
+    margin:0 auto;
+}
+
+section{
+    border:1px solid yellow;
+    width:200px;
+    height:200px;
+}
+/* 底部技能栏 */
+#center
+{
+    width:200px;
+    height:200px;
+    border:1px solid green;
+    position:relative;
+    margin:0 auto;
+}
+#s1{
+    position: absolute;
+}
+#s2{
+    position:absolute;
+    display:none;
+}
+#one{
+    border:1px solid blue;
 }
