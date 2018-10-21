@@ -4,10 +4,7 @@
      text-decoration:none;
      list-style:none;
  }
- body{
-     background: black;
-     color:white;
- }
+
  /* 清理浮动塌陷 */
 .clearfix::after
 {
@@ -17,7 +14,6 @@
 }
 /* 右侧导航栏 */
 nav>ul>li>a{
-  
     font-size:13px;
     color:gray;
     font-weight:bold;
@@ -30,14 +26,14 @@ nav>ul>li{
     padding-top:4px;
     padding-bottom:4px;
 }
-#one>nav{
+#one nav{
     float:right;
     padding-left:8px;
     padding-bottom:22px;
     padding-top:22px;
     margin-right:10px;
 }
-ul li:hover{
+ul>li:hover{
     color:orange;
     border-bottom:4px solid red;
 }
@@ -45,36 +41,111 @@ ul li:hover{
 #logo{
     margin-left:12px;
 }
-#one>a>span{
+#one a span{
     float:left;
     font-family:"Arial Black";
     font-size:22px;
      margin-top:22px;
-     
-     /* margin-left:px; */
-}
+    }
 .rs{
     color:#9A9DA2;
-    
     float:left;
     }
 .card{
     color:#e6686a;
      margin-left:4px 
 }
+#one{
+    position: fixed;
+    width:100%;
+    /* border:1px solid green; */
+}
+.one-inner{
+    height:82px;
+    /* border:1px solid red; */
+    position:relative;
+}
+/* 下方的图片 */
+.banner{
+    background-image:url("./background.JPG");
+    height:500px;
+    width:100%;
+    z-index:-1;
+    /* position: absolute; */
+    background-position:center center;
+    background-size:cover;
+    
+    }
+    .banner>.bac{
+        background-color:rgb(0,0,0,0.5);
+        height:500px;
+      }
 /* 中部介绍栏 */
 main{
-    border:3px solid red;
+    /* border:1px solid red; */
     display:block;
-    width:500px;
-    height:400px;
+    max-width:900px;
+    height:500px;
     margin:0 auto;
+    background-color:white;
+    /* position: absolute; */
+    border:1px solid gray;
+   }
+main .picture
+{
+    background-image:url('./head.jpg');
+    width:300px;
+    height:350px;
+    /* position:center center; */
+    background-size:cover;
+    float:left;
+    margin:40px;
+}
+main .text{
+    /* margin:40px; */
+    font-weight: bold;
+    padding-top:50px;
+    /* position:relative; */
+    float:left;
+}
+.media{
+    display:block;
+    border:1px solid green;
+    background-color:orangered;
+    /* bottom:100%; */
+    /* float:right; */
+    z-index:0;
+}
+svg{
+    filter:red;
+}
+main dl dt{
+    margin-top:20px;
+    margin-bottom:4px;
 }
 
-section{
-    border:1px solid yellow;
-    width:200px;
-    height:200px;
+/* 个人信息下的“hello” */
+.welcome{
+    /* display:inline-block; */
+    display:inline-block;
+    background:orangered;
+    padding:3px 13px;
+    text-align:center;
+    line-height:29px;
+    position: relative;
+    margin-bottom:4px;
+    }
+.welcome .san{
+    /* display:block; */
+    border:10px solid transparent;
+    border-left-color:orangered;
+    border-top-width:0;
+    position: absolute;
+    top:100%;
+    left:4px;
+}
+.text h1{
+    margin-top:10px;
 }
 /* 底部技能栏 */
 #center
@@ -84,7 +155,7 @@ section{
     border:1px solid green;
     position:relative;
     margin:0 auto;
-}
+    }
 #s1{
     position: absolute;
 }
@@ -92,6 +163,9 @@ section{
     position:absolute;
     display:none;
 }
-#one{
-    border:1px solid blue;
+section{
+    border:1px solid yellow;
+    width:200px;
+    height:200px;
+    /* display:none; */
 }
