@@ -103,10 +103,11 @@ main .picture
 }
 main .text{
     /* margin:40px; */
-    font-weight: bold;
+    /* font-weight: bold; */
     padding-top:50px;
     /* position:relative; */
     float:left;
+    width:470px;
 }
 .media{
     display:block;
@@ -114,16 +115,19 @@ main .text{
     background-color:orangered;
     /* bottom:100%; */
     /* float:right; */
-    z-index:0;
+    /* z-index:0; */
 }
-svg{
-    filter:red;
+.text dl dt,
+.text dl dd
+{
+    float:left;
 }
-main dl dt{
-    margin-top:20px;
-    margin-bottom:4px;
+dl dt{
+    width:30%;
 }
-
+dl dd{
+    width:60%;
+}
 /* 个人信息下的“hello” */
 .welcome{
     /* display:inline-block; */
