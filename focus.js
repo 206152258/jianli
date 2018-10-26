@@ -1,15 +1,17 @@
 window.onload=function(){
-    var s1=document.getElementById("s1");
-    var s2=document.getElementById("s2");
-    var s3=document.getElementById("s3");
-    var s4=document.getElementById("s4");
-    s4.onclick=function(){
-        s1.style.display="none";
-        s2.style.display="block";
-        
+    var all=document.getElementById("all");
+    var kuangjia=document.getElementById("kuangjia");
+    var yuansheng=document.getElementById("yuansheng");
+    var bar=document.getElementById("barinner");
+    all.onclick=function(){
+        bar.className="barinner1";
+        bar.style.color="green";
     }
-    s3.onclick=function(){
-      s2.style.display="none";
-        s1.style.display="block";
+    kuangjia.onclick=function(){
+    bar.className="barinner2";
     }
+    yuansheng.onclick=function(){
+        bar.className="barinner3";
+        }
+       
 }
