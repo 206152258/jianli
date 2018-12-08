@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的简历</title>
-    <link rel="icon" href="big.JPG" type="image/Y-icon" />
+    <link rel="stylesheet" href="new.css">
+    <!-- <link rel="icon" href="big.JPG" type="image/Y-icon" /> -->
     <!-- 这个是浏览器顶部的图标 -->
 
     <link rel="stylesheet" href="focus.css">
-       <!-- <script src="//at.alicdn.com/t/font_882715_ht26jsadi7a.js"></script> -->
-<!-- <style type="text/css">
+    <!-- <script src="//at.alicdn.com/t/font_882715_ht26jsadi7a.js"></script> -->
+    <!-- <style type="text/css">
     .icon {
         width: 1em;
         height: 1em;
@@ -21,50 +22,57 @@
     }
 </style> -->
 
-    </head>
-
-
+</head>
 <body>
-            <!-- 头部导航栏 -->
-    <div class="clearfix" id="one">
-        <div class="one-inner">
+    <div id="allwelcome" class="all-welcome active">
+        <div id="loading"> </div>
+    </div>
+    <!-- 头部导航栏 -->
+    <div class="clearfix " id="one">
+        <div class="one-inner" id="sticky">
             <a href="#" id="logo" style="float:left;">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
             </a>
-
             <nav>
                 <ul class="clearfix">
-                    <li>
-                        <a href="#" class="two">博客</a>
+                    <li> 
+                        <a class="menuTigger two" href="#boke" >博客</a>
+                        <ul class="submenu ">
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hhhhh</li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#" class="two">空间</a>
+                        <a href="#room" class=" menuTigger two">空间</a>
+                        <ul class="submenu ">
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hhhhh</li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#" class="two">微博</a>
+                        <a href="#weibo" class="two">介绍</a>
                     </li>
                     <li>
-                        <a href="#" class="two">朋友圈</a>
+                        <a href="#friendgroup" class="two">朋友圈</a>
                     </li>
                     <li>
-                        <a href="#" class="two">Twitter</a>
+                        <a href="#twitter" class="two">Twitter</a>
                     </li>
                     <li>
-                        <a href="#" class="two">mail</a>
+                        <a href="#mail" class="two">mail</a>
                     </li>
                     <li>
-                        <a href="#" class="two">plan</a>
+                        <a href="#skill" class="two">plan</a>
                     </li>
                     <li>
-                        <a href="#" class="two">dream</a>
+                        <a href="#dream" class="two">dream</a>
                     </li>
                 </ul>
 
             </nav>
-
-
-
         </div>
     </div>
     <!-- 头部的图片 -->
@@ -72,11 +80,11 @@
         <div class="bac"></div>
     </div>
     <!-- 中部的个人信息-->
-    
-        <main class="clearfix">
+
+    <main  data-x id="weibo" class="clearfix">
         <div class="all clearfix">
-          <div class="picture"></div>
-          <div class="text clearfix">
+            <div class="picture"></div>
+            <div class="text clearfix">
                 <span class="welcome">hello
                     <span class="san"></span>
                 </span>
@@ -84,77 +92,72 @@
                 <p>前端开发工程师</p>
                 <hr>
                 <dl>
-                    <dt>年龄:</dt><dd id="20">20</dd>
-                    <dt>地址:</dt><dd>福建省厦门市思明区厦禾路</dd>
-                    <dt>邮箱:</dt><dd>2452588075sun@gmail.com</dd>
-                    <dt>所在城市:</dt><dd>厦门市</dd>
+                    <dt>年龄:</dt>
+                    <dd id="20">20</dd>
+                    <dt>地址:</dt>
+                    <dd>福建省厦门市思明区厦禾路</dd>
+                    <dt>邮箱:</dt>
+                    <dd>2452588075sun@gmail.com</dd>
+                    <dt>所在城市:</dt>
+                    <dd>厦门市</dd>
                 </dl>
             </div>
-           
-        </div>
- <footer class="media">
-     <div class="center">
 
-     
+        </div>
+        <footer class="media">
+            <div class="center">
+
+
                 <a href="https://weibo.com/" class="four">
-                 <img src="./微博.png" alt=""> 
-                                    </a>
+                    <img src="./微博.png" alt="">
+                </a>
                 <a href="#" class="four">
                     <img src="./github.png" alt="">
-                                    </a>
-                <a href="https://weixin.com/" class="four">
-                <img src="./Twitter.png" alt="">
-                    
                 </a>
-            
-                
-                </div>
-            </footer>
+                <a href="https://weixin.com/" class="four">
+                    <img src="./Twitter.png" alt="">
 
-        </main>
+                </a>
 
-        <!-- 中间的自我介绍 -->
-     
-        <p style="text-align:center"><a href="./download.pdf" class="five" target="self" download>下载简历</a></p>
-  
-        <p class="introduce">
-            Tony Sun ,前端工程师，饥人谷学员。努力提升中
-        </p>
 
-        <p class="introduce"> 
-            技能，前端开发 vue node.js开发
-        </p>  
-        
-        
-
-    
+            </div>
+        </footer>
+    </main >
+    <!-- 中间的自我介绍 -->
+    <p style="text-align:center"><a href="./download.pdf" class="five" target="self" download>下载简历</a></p>
+    <p id="plan" class="introduce">
+        Tony Sun ,前端工程师，饥人谷学员。努力提升中
+    </p>
+    <p class="introduce">
+        技能，前端开发 vue node.js开发
+    </p>
     <!-- 中部的技能介绍 -->
-    <div id="center">
-        <section id="s1">
+    <div  id="center friendgroup">
+        <section  id="s1">
             <h2 id="s4">技能</h2>
-            <ol class="clearfix">
+            <ol class="clearfix" data-x id="skill">
                 <li>
                     <h5>HTML 5 &amp; CSS3</h5>
                     <div class="css3">
-                        <div class="jindu"  style="width:80%"></div>
+                        <div class="jindu" style="width:80%"></div>
                     </div>
                 </li>
                 <li>
                     <h5>JavaScript</h5>
                     <div class="css3">
-                        <div class="jindu"  style="width:10%"></div>
+                        <div class="jindu" style="width:10%"></div>
                     </div>
                 </li>
                 <li>
                     <h5>Node.js</h5>
                     <div class="css3">
-                        <div class="jindu"  style="width:20%"></div>
+                        <div class="jindu" style="width:20%"></div>
                     </div>
                 </li>
                 <li>
                     <h5>vue.js</h5>
                     <div class="css3">
-                        <div class="jindu"  style="width:40%"></div>
+                        <div class="jindu" style="width:40%"></div>
                     </div>
                 </li>
                 <li>
@@ -166,13 +169,13 @@
                 <li>
                     <h5>http</h5>
                     <div class="css3">
-                        <div class="jindu"  style="width:30%"></div>
+                        <div class="jindu" style="width:30%"></div>
                     </div>
                 </li>
-                
+
             </ol>
         </section>
-        <section id="s2">
+        <section  id="s2">
             <h2 id="s3">作品集</h2>
             <nav id="create">
                 <ol>
@@ -180,19 +183,28 @@
                     <li id="kuangjia">框架</li>
                     <li id="yuansheng">原生JS&amp;CSS</li>
                 </ol>
-                <div class="bar"><div id="barinner" class="barinner1"></div></div>
+                <div class="bar" >
+                    <div id="barinner" class="barinner1"></div>
+                </div>
             </nav>
             <script src="focus.js"></script>
-            <div class="jobs">
+            
+            <div data-x class="jobs" id="dream">
                 <div class="big">
                     <img src="./1.jpg" alt="">
                 </div>
-                <div class="small" ><img src="./2.jpg" alt=""></div>
+                <div class="small"><img src="./2.jpg" alt=""></div>
                 <div class="small" style=" top:309px"><img src="./3.jpg" alt=""></div>
             </div>
         </section>
     </div>
+    <script>
+        setTimeout(function () {
+            allwelcome.classList.remove('active');
+        }, 1000);
 
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
 </body>
 
 

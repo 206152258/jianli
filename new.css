@@ -1,0 +1,43 @@
+.all-welcome{
+    top:0px;left:0px;height:100%;width:100%;
+    position:fixed;
+    background-color:gray;
+    display:none;
+    justify-content:center;
+    align-items: center;
+    z-index:2;
+     }
+      .active{
+      display:flex;
+     }
+    #loading{
+        width:200px;
+        height:200px;
+        /* border:1px solid green; */
+        position: relative;
+    }
+    #loading:after,#loading:before{
+        content:'';
+        width:0px;
+        height:0px;
+        position:absolute;
+        background-color: black;
+        border-radius:50%;
+        left:0px;
+        top:0px;
+        right:0px;
+        bottom: 0px;
+        margin:auto;
+        animation: s 1s linear infinite;
+    }
+    #loading:before{
+        animation-delay:0.75s;
+    }
+    @keyframes s{
+        0%{
+            width:1px; height:1px; opacity: 1;
+        }
+        100%{
+            width:30px; height:30px; opacity:0;
+        }
+    }

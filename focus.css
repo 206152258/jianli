@@ -8,6 +8,7 @@
 body{
    background-color:#efefef; 
 }
+[data-x].hell{border:5px solid green;}
  /* 清理浮动塌陷 */
 .clearfix::after
 {
@@ -20,6 +21,7 @@ nav>ul>li>a{
     font-size:13px;
     color:gray;
     font-weight:bold;
+    position: relative;
 }
 nav>ul>li{
     float:left; 
@@ -28,6 +30,7 @@ nav>ul>li{
     border-bottom:4px solid transparent;
     padding-top:4px;
     padding-bottom:4px;
+    position: relative;
 }
 #one nav{
     float:right;
@@ -36,10 +39,49 @@ nav>ul>li{
     padding-top:22px;
     margin-right:10px;
 }
-ul>li:hover{
-    color:orange;
-    border-bottom:4px solid red;
-}
+
+    ul>li>a:hover::after{
+        content:'';
+        display:block;
+        top:100%;
+        left:0;
+        width:100%;
+        background-color:orangered;
+        height:3px;
+        animation: v 0.4s;
+        }
+    @keyframes v{
+        0%{
+            width:0;
+        }
+        100%{
+            width:100%;
+        }
+    }
+    .submenu{
+        display:none;
+        position: absolute;
+        content:'';
+        clear:both;
+        color:black;
+        background-color:white;
+        left:0;
+        top:100%;
+    }
+     .active1{
+        display:inline-block;
+    }
+    nav>ul>li>a.active1>.submenu{
+      animation: sss .3s;
+      display:block;
+    }
+    @keyframes sss{
+        0%{
+            margin-right:100%;
+        }100%{
+            margin-right:0%;
+        }
+    }
 /* 左侧导航栏 */
 #logo{
     margin-left:12px;
@@ -257,7 +299,7 @@ padding-left:0;
     width:90%;
     height:5px;
     background-color:#ff9999;
-  margin-top:5px;
+    margin-top:5px;
     border-radius:4px;
 
 }
@@ -283,7 +325,7 @@ nav ol li{
     cursor: pointer;
     
 }
-nav .bar{
+nav.bar{
     /* border:1px solid red; */
     display:block;
     margin-bottom:30px;
@@ -292,7 +334,7 @@ nav .bar{
     
  
 }
-nav .bar #barinner{
+nav.bar #barinner{
     height:3px;
     /* width:32px; */
     background-color:rgb(250, 79, 79);
@@ -340,4 +382,20 @@ nav .bar #barinner{
     position: absolute;
     
     margin-left:607px;
+}
+.sticky{
+    background-color: white;
+   height:60px;
+   box-shadow: -1px 1px 10px 0px rgba(0,0,0,0.75);
+}
+[data-x].animate{
+
+}
+@keyframes slides{
+    0%{
+    transform: translateY(-30px);
+    }
+    100%{
+     transform:translateY(0);
+    }
 }
