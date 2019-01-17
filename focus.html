@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="new.css">
     <!-- <link rel="icon" href="big.JPG" type="image/Y-icon" /> -->
     <!-- 这个是浏览器顶部的图标 -->
-
     <link rel="stylesheet" href="focus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+
     <!-- <script src="//at.alicdn.com/t/font_882715_ht26jsadi7a.js"></script> -->
     <!-- <style type="text/css">
     .icon {
@@ -21,8 +22,17 @@
         overflow: hidden;
     }
 </style> -->
+    <style>
+        .swiper-container {
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    
+}
+</style>
 
 </head>
+
 <body>
     <div id="allwelcome" class="all-welcome active">
         <div id="loading"> </div>
@@ -36,8 +46,8 @@
             </a>
             <nav>
                 <ul class="clearfix">
-                    <li> 
-                        <a class="menuTigger two" href="#boke" >博客</a>
+                    <li>
+                        <a class="menuTigger two" href="#boke">博客</a>
                         <ul class="submenu ">
                             <li>hello</li>
                             <li>world</li>
@@ -81,7 +91,7 @@
     </div>
     <!-- 中部的个人信息-->
 
-    <main  data-x id="weibo" class="clearfix">
+    <main data-x id="weibo" class="clearfix">
         <div class="all clearfix">
             <div class="picture"></div>
             <div class="text clearfix">
@@ -122,7 +132,7 @@
 
             </div>
         </footer>
-    </main >
+    </main>
     <!-- 中间的自我介绍 -->
     <p style="text-align:center"><a href="./download.pdf" class="five" target="self" download>下载简历</a></p>
     <p id="plan" class="introduce">
@@ -132,8 +142,8 @@
         技能，前端开发 vue node.js开发
     </p>
     <!-- 中部的技能介绍 -->
-    <div  id="center friendgroup">
-        <section  id="s1">
+    <div id="center friendgroup">
+        <section id="s1">
             <h2 id="s4">技能</h2>
             <ol class="clearfix" data-x id="skill">
                 <li>
@@ -175,9 +185,10 @@
 
             </ol>
         </section>
-        <section  id="s2">
+        <section id="s2">
+
             <h2 id="s3">作品集</h2>
-            <nav id="create">
+            <!-- <nav id="create">
                 <ol>
                     <li id="all">所有</li>
                     <li id="kuangjia">框架</li>
@@ -186,25 +197,59 @@
                 <div class="bar" >
                     <div id="barinner" class="barinner1"></div>
                 </div>
-            </nav>
+            </nav> -->
             <script src="focus.js"></script>
-            
-            <div data-x class="jobs" id="dream">
-                <div class="big">
+
+
+            <div class="swiper-container " data-x id="dream">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img class="swiper-slide" src="./work/keybord.JPG" alt="">
+                    <img class="swiper-slide" src="./work/canvas.jpg" alt="">
+                    <img class="swiper-slide" src="./work/apple-like-slideshow.JPG" alt="">
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+            <!-- <div class="big">
                     <img src="./1.jpg" alt="">
                 </div>
                 <div class="small"><img src="./2.jpg" alt=""></div>
-                <div class="small" style=" top:309px"><img src="./3.jpg" alt=""></div>
-            </div>
+                <div class="small" style=" top:309px"><img src="./3.jpg" alt=""></div> -->
+
         </section>
     </div>
-    <script>
+    <div id="message">
+        <h2 id="pinglun">评论</h2>
+         <form id="form">
+            姓名<input type="text" id="name">
+            内容<input type="text" id="textform">
+            <input type="submit" id="submitform">
+        </form>
+        <ol id="messageList">
+        </ol>
+    </div>
+     <script>
         setTimeout(function () {
-            allwelcome.classList.remove('active');
+        allwelcome.classList.remove('active');
         }, 1000);
 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+        <script src="message.js"></script>
+        <script src="swiper.js"></script>
+
+        <script src="focus.js"></script>
 </body>
 
 

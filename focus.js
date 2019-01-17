@@ -1,20 +1,20 @@
-window.onload = function () {
-    var all = document.getElementById("all");
-    var kuangjia = document.getElementById("kuangjia");
-    var yuansheng = document.getElementById("yuansheng");
-    var bar = document.getElementById("barinner");
-    all.onclick = function () {
-        bar.className = "barinner1";
-        bar.style.color = "green";
-    }
-    kuangjia.onclick = function () {
-        bar.className = "barinner2";
-    }
-    yuansheng.onclick = function () {
-        bar.className = "barinner3";
-    }
-
-}
+//作品栏上部的滑动  现在已经删除
+// window.onload = function () {
+//     var all = document.getElementById("all");
+//     var kuangjia = document.getElementById("kuangjia");
+//     var yuansheng = document.getElementById("yuansheng");
+//     var bar = document.getElementById("barinner");
+//     all.onclick = function () {
+//         bar.className = "barinner1";
+//         bar.style.color = "green";
+//     }
+//     kuangjia.onclick = function () {
+//         bar.className = "barinner2";
+//     }
+//     yuansheng.onclick = function () {
+//         bar.className = "barinner3";
+//     }
+// }
 window.onscroll = function (ss) {
     if (window.scrollY > 0) {
         sticky.classList.add('sticky');
@@ -35,10 +35,10 @@ window.onscroll = function (ss) {
         
     }
     var id=date[minIndex].id;
-    console.log(id);
+    // console.log(id);
     var a=document.querySelector('a[href="#'+id+'"]');
     var li=a.parentNode;
-    console.log(li);
+    // console.log(li);
     li.classList.add('lineheight');
     date[minIndex].classList.add('hell');
 
@@ -89,7 +89,7 @@ for (var o = 0; o < nava.length; o++) {
 
         var element = document.querySelector(href);//获取地址所在的标签
         var top = element.offsetTop;//获取标签上部的距离
-
+        // console.log(top);
         var n = 20;
         var duration = 500 / n;
         var currentTop = window.scrollY;
@@ -120,3 +120,5 @@ for (var o = 0; o < nava.length; o++) {
 
     }
 }
+
+    
