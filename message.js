@@ -1,29 +1,29 @@
-// var APP_ID = '4a1qMlNcbsT2SSDaJKxMJKka-gzGzoHsz';
-// var APP_KEY = 'DHog2uYMIiaWhyICL6yAUVoa';
+var APP_ID = '4a1qMlNcbsT2SSDaJKxMJKka-gzGzoHsz';
+var APP_KEY = 'DHog2uYMIiaWhyICL6yAUVoa';
 
-// AV.init({
-//   appId: APP_ID,
-//   appKey: APP_KEY
-// });
+AV.init({
+  appId: APP_ID,
+  appKey: APP_KEY
+});
 
 
 
-// var query = new AV.Query('TestObject');
-//   query.find()
-//   .then(
-//     function (testObjects) {
-//     let array=testObjects.map((item)=>item.attributes)
-//       array.forEach((item) => {
-//       let li=document.createElement('li');
-//       li.innerHTML=`${item.name}: ${item.content}`;
+var query = new AV.Query('TestObject');
+  query.find()
+  .then(
+    function (testObjects) {
+    let array=testObjects.map((item)=>item.attributes)
+      array.forEach((item) => {
+      let li=document.createElement('li');
+      li.innerHTML=`${item.name}: ${item.content}`;
       
-//       let messagelist=document.querySelector('#messageList');
-//       messagelist.append(li);
+      let messagelist=document.querySelector('#messageList');
+      messagelist.append(li);
      
-//   })    
-//   }, function (error) {
-//     // 异常处理
-//   });
+  })    
+  }, function (error) {
+    // 异常处理
+  });
 
 
 // var messageform=document.querySelector("#form");
