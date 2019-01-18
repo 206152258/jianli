@@ -26,24 +26,24 @@ var query = new AV.Query('TestObject');
   });
 
 
-// var messageform=document.querySelector("#form");
-// messageform.addEventListener('submit',function(e){
-//   e.preventDefault();
-//   let content=messageform.querySelector("#textform").value;
-//   let name=messageform.querySelector("#name").value;
-//   var TestObject = AV.Object.extend('TestObject');
-//   var testObject = new TestObject();
-//   testObject.save({
-//     'name':name,
-//     'content':content
-//   }).then(function(object) {
-//     let li=document.createElement('li');
-//       li.innerHTML=`${object.attributes.name}: ${object.attributes.content}`;
-//       let messagelist=document.querySelector('#messageList');
-//       messagelist.append(li);
-//       messageform.querySelector("#textform").value="";
-//   })
-// })
+var messageform=document.querySelector("#form");
+messageform.addEventListener('submit',function(e){
+  e.preventDefault();
+  let content=messageform.querySelector("#textform").value;
+  let name=messageform.querySelector("#name").value;
+  var TestObject = AV.Object.extend('TestObject');
+  var testObject = new TestObject();
+  testObject.save({
+    'name':name,
+    'content':content
+  }).then(function(object) {
+    let li=document.createElement('li');
+      li.innerHTML=`${object.attributes.name}: ${object.attributes.content}`;
+      let messagelist=document.querySelector('#messageList');
+      messagelist.append(li);
+      messageform.querySelector("#textform").value="";
+  })
+})
 
 
 
