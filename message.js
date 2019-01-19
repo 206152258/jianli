@@ -47,8 +47,10 @@ let content=messageform.querySelector("#textform").value;
       messagelist.append(li);
       messageform.querySelector("#textform").value="";
   })
+  }else if(name===""){
+    alert("请输入你的用户名，骚年");
   }else{
-    alert("请输入你的评论");
+    alert("快给我输入你的评论");
   }
   
 })
