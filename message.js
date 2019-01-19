@@ -1,3 +1,4 @@
+//数据初始化
 var APP_ID = '4a1qMlNcbsT2SSDaJKxMJKka-gzGzoHsz';
 var APP_KEY = 'DHog2uYMIiaWhyICL6yAUVoa';
 
@@ -7,7 +8,7 @@ AV.init({
 });
 
 
-
+//显示数据
 var query = new AV.Query('TestObject');
   query.find()
   .then(
@@ -16,22 +17,25 @@ var query = new AV.Query('TestObject');
       array.forEach((item) => {
       let li=document.createElement('li');
       li.innerHTML=`${item.name}: ${item.content}`;
-      
       let messagelist=document.querySelector('#messageList');
       messagelist.append(li);
+        
+      
      
   })    
   }, function (error) {
     // 异常处理
   });
 
-
+//添加数据
 var messageform=document.querySelector("#form");
 messageform.addEventListener('submit',function(e){
   e.preventDefault();
-  let content=messageform.querySelector("#textform").value;
+  
+let content=messageform.querySelector("#textform").value;
   let name=messageform.querySelector("#name").value;
-  var TestObject = AV.Object.extend('TestObject');
+  if(content&&name!==""){
+    var TestObject = AV.Object.extend('TestObject');
   var testObject = new TestObject();
   testObject.save({
     'name':name,
@@ -43,6 +47,10 @@ messageform.addEventListener('submit',function(e){
       messagelist.append(li);
       messageform.querySelector("#textform").value="";
   })
+  }else{
+    alert("请输入你的评论");
+  }
+  
 })
 
 
